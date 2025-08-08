@@ -195,12 +195,11 @@
 
 <script>
 (() => {
-  const ROUND_TIME = 5;
+  const ROUND_TIME = 60;
   const NUM_LETTERS = 6;
 
   // Small embedded dictionary for demo (lowercase)
   let DICTIONARY = [
-  // 3-letter words
 "AAH", "AAHED", "AAHING", "AAHS", "AAL", "AALII",
 "AALIIS", "AALS", "AARGH", "AARRGH", "AARTI", "AARTIS", "AAS", "ABA", "ABAC", "ABACA",
 "ABACAS", "ABACI", "ABACK", "ABACS", "ABACUS", "ABAFT", "ABAKA", "ABAKAS", "ABAMP", "ABAMPS",
@@ -4731,7 +4730,7 @@ function createLetterButtons() {
   }
 
   function submitWord() {
-    let word = wordInput.value.trim().toLowerCase();
+    let word = wordInput.value.trim().toUpperCase();
     if(word.length === 0) return;
 
     if(enteredWords.includes(word)) {
