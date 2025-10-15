@@ -9,8 +9,8 @@
 
   body {
     font-family: 'Garamond', serif;
-    background-color: #7ab2de;
-    color: #2774AE;
+    background-color: #131313;
+    color: #131313;
     margin: 0; padding: 0;
     display: flex;
     justify-content: center;
@@ -23,19 +23,19 @@
     width: 100%; /* Changed to 100% for responsiveness */
     max-width: 600px; /* Added max-width to limit size on larger screens */
     margin-top: 20px;
-    background-color: #fff3c1;
+    background-color: #e47d4e;
     border-radius: 10px;
-    box-shadow: 0 0 15px #1682d5;
+    box-shadow: 0 0 15px #d47b4c;
     padding: 20px;
     box-sizing: border-box;
   }
 
   button {
-    background-color: #FFFFFF;
-    color: #7ab2de;
+    background-color: #131313;
+    color: #d47b4c;
     font-weight: bold;
     font-family: 'Garamond', serif;
-    border: 2px solid #FFD100;
+    border: 2px solid #da865f;
     border-radius: 5px;
     padding: 10px 25px;
     font-size: 18px;
@@ -45,8 +45,8 @@
     margin: 0 auto 20px auto;
   }
   button:hover {
-    background-color: #FFD100;
-    border: 2px solid #FFD100;
+    background-color: #d65418;
+    border: 2px solid #131313;
     color: white
   }
 
@@ -55,22 +55,22 @@
   }
 
   h1 {
-    font-size: 22px;
+    font-size: 28px;
     font-weight: bold;
-    color: #2774AE;
+    color: #131313;
     text-align: center;
   }
 
   h2 {
-    font-size: 18px;
-    color: #2774AE;
+    font-size: 22px;
+    color: #131313;
     text-align: center;
     font-style: italic;
   }
 
   .subtitle {
     margin-bottom: 40px;
-    color: #2774AE;
+    color: #131313;
   }
 
   #start-screen, #game-screen, #play-again-screen {
@@ -97,9 +97,9 @@
       max-height: 40px; /* Set a max-height for larger screens */
       margin: 0 1px; /* Adjust margin for tight spacing */
       border-radius: 5px;
-      background-color: white;
-      color: #FFD100;
-      border: 2px solid #FFD100;
+      background-color: #131313;
+      color: #d65418;
+      border: 2px solid #d65418;
       cursor: pointer;
       transition: background-color 0.3s ease, color 0.3s ease;
       display: flex;
@@ -110,28 +110,28 @@
     .letters-container {
         display: flex;
         justify-content: center; /* center the row horizontally */
-        gap: 2px; /* optional: spacing between buttons */
+        gap: 10px; /* optional: spacing between buttons */
         flex-wrap: wrap; /* optional: wrap if screen too narrow */
     }
   
   .letter-btn.selected {
-    background-color: #FFD100;
-    color: white;
-    border: 2px solid #FFD100;
+    background-color: #d65418;
+    color: #131313;
+    border: 2px solid #d65418;
   }
 
   #timer {
     font-size: 25px;
     margin-bottom: 10px;
     text-align: center;
-    color: #2774AE;
+    color: #131313;
   }
 
   #score {
     font-size: 22px;
     margin-bottom: 15px;
     text-align: center;
-    color: #2774AE;
+    color: #131313;
   }
 
   #word-input {
@@ -141,9 +141,9 @@
     font-size: 18px;
     padding: 8px 12px;
     width: 60%;
-    border: 2px solid #FFD100;
+    border: 2px solid #131313;
     border-radius: 5px;
-    color: #2774AE;
+    color: #d65418;
     text-align: center;
   }
 
@@ -151,18 +151,18 @@
     display: block;
     margin: 0 auto 15px auto;
     padding: 8px 16px;
-    border: 2px solid #FFD100;
+    border: 2px solid #d65418;
   }
 
   #word-list {
     width: 90%;
     height: 190px;
-    border: 2px groove #FFD100;
+    border: 2px groove #131313;
     border-radius: 5px;
     padding: 5px;
     font-family: 'Garamond', serif;
     font-size: 16px;
-    color: #2774AE;
+    color: #d65418;
     overflow-y: auto;
   }
 
@@ -177,30 +177,29 @@
   <div class="container">
     <!-- Start Screen -->
     <div id="start-screen">
-      <h1>💙🐻🎓Anagrams for Amelia🎓🐻💙</h1>
-      <h2 class="subtitle">Year Four at UCLA edition!</h2>
-      <h2 class="subtitle">💛Have a great first week!💛</h2>
+      <h1>🖤🔮Anagrams for Amelia🔮🖤</h1>
+      <h2 class="subtitle">🦇🎃HAPPY HALLOWEEN🎃🦇</h2>
       <p style="text-align:center; font-style: bold; font-size: 20px; margin-bottom: 40px;">
         🏆 Highest Score: <span id="high-score-start">0</span>🏆
       </p>
-      <button id="start-btn">💙 Start Game 💙</button>
+      <button id="start-btn">🎃 Start Game 🎃</button>
     </div>
 
     <!-- Game Screen -->
     <div id="game-screen">
-      <h1>💛 Ameliagrams 💛</h1>
+      <h1>🖤🎃Ameliagrams🎃🖤</h1>
       <p id="score">Score: 0</p>
       <p id="timer">⏳ Time Left: 60</p>
       <input type="text" id="word-input" autocomplete="off" />
       <div class="letters-container" id="letters-container"></div>
-      <button id="submit-btn">💙 Submit Word 💙</button>
+      <button id="submit-btn">🧡 Submit Word 🧡</button>
       <textarea id="word-list" readonly></textarea>
     </div>
 
     <!-- Play Again Screen -->
     <div id="play-again-screen">
-      <h1>💛 Run it Back? 💛</h1>
-      <button id="play-again-btn">💙 Hell yeah! 💙</button>
+      <h1>🖤 Run it Back? 🖤</h1>
+      <button id="play-again-btn">👻 oookkkaayy 👻</button>
     </div>
   </div>
 
@@ -4704,7 +4703,7 @@ function createLetterButtons() {
     enteredWords.forEach(w => {
       const points = calculateScore(w);
       const crown = (w === longestWord) ? " 👑" : "";
-      wordList.value += `❤️ ${w} (+${points})${crown}\n`;
+      wordList.value += `🖤 ${w} (+${points})${crown}\n`;
     });
     wordList.scrollTop = wordList.scrollHeight;
   }
@@ -4746,7 +4745,7 @@ function createLetterButtons() {
     if(word.length === 0) return;
 
     if(enteredWords.includes(word)) {
-      alert("You already entered that one, babe 💞");
+      alert("You already entered that one, babe 🖤");
     } else if(!isValidWord(word)) {
       alert(`'${word}' isn’t valid — but you're so cute I should add it anyways 😘`);
     } else {
@@ -4777,7 +4776,7 @@ function createLetterButtons() {
 
     let missedStr = missedWords.length > 0
       ? missedWords.slice(0, 20).join('\n')
-      : "HOLY SHIT BABY you got every single word!🌟";
+      : "HOLY SHIT BABY you got every single word!🌟 You must be a witch :O";
 
     // Check and save high score
     if(totalScore > highestScore) {
@@ -4786,7 +4785,7 @@ function createLetterButtons() {
     }
 
     alert(
-      `💘 Helll yeahh babe good job! I love you more than every word in the dictionary :) Hope you're having a great time at school! 💘\n\n` +
+      `💘 Helll yeahh babe good job! I love you more than every word in the dictionary :) 💘\n\n` +
       `✅ You found ${enteredWords.length} words!\n` +
       `👑 Longest word: ${longestWord}\n` +
       `✨ Total Score: ${totalScore} points ✨\n` +
